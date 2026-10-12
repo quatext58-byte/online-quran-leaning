@@ -1,0 +1,686 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Haifz Umar Online Quran Academy | Learn Quran Online</title>
+
+<meta name="description" content="Learn Quran online with a Hafiz-e-Quran. Online Quran classes for children and adults, including Noorani Qaida, Nazra, Tajweed and Hifz.">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --green: #075b46;
+    --dark: #063b30;
+    --gold: #d9ad55;
+    --cream: #fbf8ef;
+    --white: #ffffff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--cream);
+    color: #25352f;
+    line-height: 1.7;
+}
+
+header {
+    background: var(--white);
+    padding: 15px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 3px 15px #0000000c;
+}
+
+.logo {
+    color: var(--green);
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: var(--gold);
+}
+
+nav a {
+    text-decoration: none;
+    color: #263c34;
+    margin-left: 22px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: var(--gold);
+}
+
+.hero {
+    min-height: 590px;
+    padding: 90px 8%;
+    display: flex;
+    align-items: center;
+    background:
+        radial-gradient(circle at 85% 20%, #d8b96b33, transparent 30%),
+        linear-gradient(120deg, #063b30, #08765a);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: "۞";
+    position: absolute;
+    right: 7%;
+    top: 12%;
+    font-size: 270px;
+    color: #ffffff0c;
+}
+
+.hero-content {
+    max-width: 720px;
+    position: relative;
+    z-index: 1;
+}
+
+.tag {
+    color: #f3d58b;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: clamp(36px, 5vw, 62px);
+    line-height: 1.15;
+    margin: 20px 0;
+}
+
+.hero h1 span {
+    color: #f3d58b;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #e3eee9;
+    max-width: 600px;
+    margin-bottom: 28px;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--gold);
+    color: #173c2e;
+    padding: 13px 25px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 5px 8px 5px 0;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    background: #efca79;
+}
+
+.btn-outline {
+    border: 1px solid #ffffff99;
+    color: white;
+    background: transparent;
+}
+
+section {
+    padding: 75px 8%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title small {
+    color: #b18532;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.section-title h2 {
+    color: var(--dark);
+    font-size: 34px;
+    margin-top: 8px;
+}
+
+.section-title p {
+    max-width: 650px;
+    margin: 10px auto;
+    color: #68766f;
+}
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    align-items: center;
+}
+
+.about-art {
+    background: linear-gradient(145deg, #e7d9af, #f8f2df);
+    border-radius: 20px;
+    min-height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 35px;
+    border: 1px solid #e1d3ac;
+}
+
+.quran-symbol {
+    font-size: 90px;
+    color: var(--green);
+}
+
+.about-art h3 {
+    color: var(--green);
+    font-size: 25px;
+}
+
+.about-text h2 {
+    color: var(--green);
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    color: #617069;
+    margin-bottom: 15px;
+}
+
+.check {
+    margin: 10px 0;
+    color: var(--green);
+    font-weight: bold;
+}
+
+.courses {
+    background: #f0f4ed;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.course-card {
+    background: white;
+    padding: 27px 22px;
+    border-radius: 13px;
+    border-bottom: 4px solid var(--gold);
+    box-shadow: 0 6px 22px #123c2410;
+    transition: 0.3s;
+}
+
+.course-card:hover {
+    transform: translateY(-6px);
+}
+
+.course-icon {
+    font-size: 37px;
+    margin-bottom: 12px;
+}
+
+.course-card h3 {
+    color: var(--green);
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.course-card p {
+    color: #69766f;
+    font-size: 14px;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.benefit {
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #e6e9df;
+    text-align: center;
+}
+
+.benefit h3 {
+    color: var(--green);
+    margin: 10px 0;
+}
+
+.benefit p {
+    color: #69766f;
+    font-size: 14px;
+}
+
+.admission {
+    text-align: center;
+    color: white;
+    background: linear-gradient(120deg, #063b30, #08765a);
+}
+
+.admission h2 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.admission p {
+    max-width: 680px;
+    margin: 0 auto 25px;
+    color: #e2eee8;
+}
+
+.contact {
+    background: white;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    max-width: 950px;
+    margin: auto;
+}
+
+.contact-info {
+    background: var(--cream);
+    padding: 30px;
+    border-radius: 14px;
+}
+
+.contact-info h3 {
+    color: var(--green);
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    margin: 12px 0;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #d7dfd7;
+    border-radius: 7px;
+    font: inherit;
+    background: #fff;
+}
+
+.contact-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.contact-form button {
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+footer {
+    background: #042d25;
+    color: #dce9e2;
+    text-align: center;
+    padding: 28px 7%;
+}
+
+footer strong {
+    color: #f0ce7c;
+}
+
+.whatsapp-float {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 200;
+    background: #25d366;
+    color: white;
+    padding: 13px 18px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 15px #0003;
+}
+
+@media (max-width: 950px) {
+    .course-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    nav a {
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 650px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    nav a {
+        margin: 0;
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 500px;
+        padding: 65px 7%;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    section {
+        padding: 55px 6%;
+    }
+
+    .about,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .course-grid,
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title h2,
+    .about-text h2,
+    .admission h2 {
+        font-size: 28px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Hafiz Umar <span>QURAN ACADEMY</span></div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#courses">Courses</a>
+        <a href="#admission">Admission</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <div class="tag">Online Quran Learning for Everyone</div>
+
+        <h1>Learn the Holy Quran <span>From Home</span></h1>
+
+        <p>
+            Begin your beautiful journey with the Holy Quran.
+            Learn Noorani Qaida, Quran reading, Tajweed and Hifz
+            through online classes with personal guidance from a Hafiz-e-Quran.
+        </p>
+
+        <a class="btn" href="#admission">Start Learning Today</a>
+        <a class="btn btn-outline" href="#courses">Explore Courses</a>
+    </div>
+</section>
+
+<section id="about">
+    <div class="about">
+        <div class="about-art">
+            <div>
+                <div class="quran-symbol">۞</div>
+                <h3>Learn • Recite • Understand</h3>
+                <p>Building a lifelong connection with the Holy Quran</p>
+            </div>
+        </div>
+
+        <div class="about-text">
+            <h2>Assalamu Alaikum!</h2>
+
+            <p>
+                My name is <strong>Hafiz Umar</strong>, and I am a
+                Hafiz-e-Quran. My aim is to help children and adults
+                learn the Holy Quran online in a respectful,
+                supportive and comfortable learning environment.
+            </p>
+
+            <p>
+                Whether you are starting with the basics or improving
+                your recitation, I will guide you according to your
+                learning level and goals.
+            </p>
+
+            <div class="check">✓ Individual attention for every student</div>
+            <div class="check">✓ Flexible class timings by arrangement</div>
+            <div class="check">✓ Lessons for children and adults</div>
+            <div class="check">✓ Online learning from your home</div>
+        </div>
+    </div>
+</section>
+
+<section class="courses" id="courses">
+    <div class="section-title">
+        <small>Our Learning Programs</small>
+        <h2>Choose Your Quran Course</h2>
+        <p>
+            Start from the basics or improve your existing Quran
+            reading with a course suited to your level.
+        </p>
+    </div>
+
+    <div class="course-grid">
+        <div class="course-card">
+            <div class="course-icon">📖</div>
+            <h3>Noorani Qaida</h3>
+            <p>
+                Learn Arabic letters, pronunciation, basic reading
+                rules and how to begin reading the Quran.
+            </p>
+        </div>
+
+        <div class="course-card">
+            <div class="course-icon">📗</div>
+            <h3>Nazra Quran</h3>
+            <p>
+                Develop fluent Quran reading with regular practice
+                and guidance on correct pronunciation.
+            </p>
+        </div>
+
+        <div class="course-card">
+            <div class="course-icon">✨</div>
+            <h3>Tajweed</h3>
+            <p>
+                Improve your recitation by learning the rules of
+                Tajweed and the proper articulation of letters.
+            </p>
+        </div>
+
+        <div class="course-card">
+            <div class="course-icon">🕌</div>
+            <h3>Hifz-ul-Quran</h3>
+            <p>
+                Work towards memorising the Holy Quran through
+                a planned routine of new lessons and revision.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="section-title">
+        <small>Why Learn With Us?</small>
+        <h2>A Comfortable Online Learning Experience</h2>
+    </div>
+
+    <div class="benefits-grid">
+        <div class="benefit">
+            <div class="course-icon">👨‍🏫</div>
+            <h3>Personal Guidance</h3>
+            <p>Lessons adapted to the student's current reading level.</p>
+        </div>
+
+        <div class="benefit">
+            <div class="course-icon">💻</div>
+            <h3>Learn Online</h3>
+            <p>Attend classes from home using a phone, tablet or computer.</p>
+        </div>
+
+        <div class="benefit">
+            <div class="course-icon">🕒</div>
+            <h3>Flexible Timing</h3>
+            <p>Discuss a suitable class schedule before enrolling.</p>
+        </div>
+    </div>
+</section>
+
+<section class="admission" id="admission">
+    <h2>Your Quran Learning Journey Starts Here</h2>
+
+    <p>
+        Take the first step towards learning the Holy Quran.
+        Contact us to discuss your course, class schedule and fees.
+    </p>
+
+    <a class="btn"
+       href="https://wa.me/923001234567?text=Assalamu%20Alaikum%2C%20I%20am%20interested%20in%20online%20Quran%20classes."
+       target="_blank" rel="noopener">
+        Enquire on WhatsApp
+    </a>
+</section>
+
+<section class="contact" id="contact">
+    <div class="section-title">
+        <small>Get in Touch</small>
+        <h2>Enrol for Online Quran Classes</h2>
+        <p>Send your details through WhatsApp to discuss admission.</p>
+    </div>
+
+    <div class="contact-grid">
+        <div class="contact-info">
+            <h3>Contact Information</h3>
+
+            <p><strong>Teacher:</strong>Hafiz Umar</p>
+            <p><strong>Qualification:</strong> Hafiz-e-Quran</p>
+            <p><strong>Classes:</strong> Online</p>
+            <p><strong>Students:</strong> Children and Adults</p>
+
+            <p>
+                <strong>WhatsApp:</strong><br>
+               03352469139
+            </p>
+        </div>
+
+        <form class="contact-form" id="studentForm">
+            <input type="text" id="studentName"
+                   placeholder="Student's Full Name" required>
+
+            <input type="number" id="studentAge"
+                   placeholder="Student's Age" min="3" max="120" required>
+
+            <select id="course" required>
+                <option value="">Select Your Course</option>
+                <option>Noorani Qaida</option>
+                <option>Nazra Quran</option>
+                <option>Tajweed</option>
+                <option>Hifz-ul-Quran</option>
+            </select>
+
+            <textarea id="message"
+                      placeholder="Your message or preferred class timing"></textarea>
+
+            <button class="btn" type="submit">
+                Send Enquiry on WhatsApp
+            </button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <p><strong>Hafiz Umar Online Quran Academy</strong></p>
+    <p>Learn the Holy Quran with care, respect and dedication.</p>
+    <p>© <span id="year"></span> Hafiz Umar Online Quran Academy</p>
+</footer>
+
+<a class="whatsapp-float"
+   href="https://wa.me/923352469139?text=Assalamu%20Alaikum%2C%20I%20want%20to%20learn%20Quran%20online."
+   target="_blank" rel="noopener">
+    WhatsApp Us
+</a>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+
+document.getElementById("studentForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    // IMPORTANT: Replace this example number with your WhatsApp number.
+    const whatsappNumber = "923352469139";
+
+    const name = document.getElementById("studentName").value.trim();
+    const age = document.getElementById("studentAge").value;
+    const course = document.getElementById("course").value;
+    const message = document.getElementById("message").value.trim();
+
+    const text =
+        "Assalamu Alaikum! I am interested in online Quran classes.%0A%0A" +
+        "Student Name: " + encodeURIComponent(name) + "%0A" +
+        "Age: " + encodeURIComponent(age) + "%0A" +
+        "Course: " + encodeURIComponent(course) + "%0A" +
+        "Message: " + encodeURIComponent(message);
+
+    window.open(
+        "https://wa.me/" + whatsappNumber + "?text=" + text,
+        "_blank"
+    );
+});
+</script>
+
+</body>
+</html>
